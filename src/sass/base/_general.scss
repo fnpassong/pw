@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+body {
+  font-family: $ff-serif;
+  font-weight: $fw-400;
+  background-color: clr(neutral, 450);
+  color: clr(neutral, 600);
+
+  // display: grid;
+  // grid-template-columns: var(--gap, $gap-mobile) auto 1fr var(
+  //     --gap,
+  //     $gap-mobile
+  //   );
+  // @include mq(medium) {
+  //   --gap: #{$gap-tablet};
+  // }
+
+  // @include mq(large) {
+  //   --gap: #{$gap-desktop};
+  // }
+}

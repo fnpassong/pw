@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+$ff-serif: "Tinos", serif;
+$ff-sans: "Limelight", sans-serif; //Solo fw-400
+
+$ff-base: $ff-serif;
+$ff-accent: $ff-sans;
+
+$font-sizes: (
+  900: 3.75rem,
+  800: 3rem,
+  600: 1.5rem,
+  500: 1.3125rem,
+  400: 1.125rem,
+);
+
+$fw-400: 400;
+$fw-700: 700;

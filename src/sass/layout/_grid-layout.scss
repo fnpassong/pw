@@ -1,0 +1,10 @@
+@use "../abstracts/" as *;
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: var(--gap, $gap-mobile) auto 1fr var(
+      --gap,
+      $gap-mobile
+    );
+  align-items: var(--alignItems, center);
+}
