@@ -2,9 +2,9 @@
 
 .grid-layout {
   display: grid;
-  grid-template-columns: var(--gap, $gap-mobile) auto 1fr var(
-      --gap,
-      $gap-mobile
-    );
+  grid-template-columns: var(--gap, $gap-mobile) var(--col1, auto) var(
+      --col2,
+      1fr
+    ) var(--gap, $gap-mobile);
   align-items: var(--alignItems, center);
 }

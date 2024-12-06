@@ -28,8 +28,146 @@
   }
 
   @include mq(large) {
+    &__wrapper {
+      min-height: size(36) * 4;
+    }
     &__wrapper.grid-layout {
       --gap: #{$gap-desktop};
+      // grid-template-columns: var(--gap) ;
+      grid-template-areas: ". logo title title";
+    }
+
+    &__logo {
+      margin-inline-end: size(36);
+    }
+
+    &__title {
+      background-color: clr(primary, 550);
+      width: 100%;
+      grid-area: title;
+      font-size: fs(800);
+      display: flex;
+      justify-content: center;
+
+      height: 100%;
+      align-items: center;
+    }
+  }
+}
+
+.hero {
+  &__wrapper {
+    display: grid;
+    // grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "stack";
+  }
+
+  &__pic {
+    background-image: linear-gradient(rgba(5 7 12 / 0.7), rgba(5 7 12 / 0.3)),
+      url(../assets/img/img-hero-mobile.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: $width-mobile;
+    aspect-ratio: 16 / 9;
+    grid-area: stack;
+  }
+
+  &__text-group {
+    // grid-area: stack;
+    // place-self: center;
+    // align-self: center;
+    grid-column: 2 / span 1;
+
+    color: white;
+  }
+
+  &__title {
+    width: min-content;
+    font-size: fs(600);
+    line-height: 1;
+  }
+
+  &__note {
+    font-size: x-small;
+    font-style: italic;
+    color: clr(primary, 550);
+    font-weight: $fw-700;
+  }
+
+  &__paragraph {
+    // background-color: lightblue;
+    // width: min(60ch, 75%);
+    line-height: 1;
+  }
+
+  @include mq(medium) {
+    &__wrapper {
+      --gap: #{$gap-tablet};
+      --col1: 1fr;
+      --col2: 1fr;
+
+      grid-template-areas: ". text pic .";
+    }
+
+    &__text-group {
+      position: absolute;
+      z-index: 100;
+      left: $gap-tablet;
+      right: $gap-tablet;
+      grid-area: text;
+    }
+
+    &__pic {
+      background-image: url(../assets/img/hero-tablet.webp);
+      background-size: cover;
+      // max-width: 690px;
+      height: auto;
+      aspect-ratio: 16 / 9;
+
+      grid-area: pic;
+      grid-column: 3 / 4;
+    }
+
+    &__title {
+      width: 30ch;
+      color: clr(primary, 550);
+      font-weight: $fw-700;
+    }
+
+    &__note {
+      font-size: fs(500);
+    }
+
+    &__paragraph {
+      color: clr(neutral, 600);
+      font-weight: $fw-700;
+      width: 45ch;
+      font-size: 1.5rem;
+      line-height: 1.1;
+    }
+  }
+
+  @include mq(large) {
+    transform: translateY(calc(size(25)) * -1);
+    &__wrapper {
+      --gap: #{$gap-desktop};
+      --col1: 1fr;
+      --col2: 1fr;
+
+      grid-template-areas: ". text pic .";
+    }
+
+    &__text-group {
+      left: $gap-desktop;
+      right: $gap-desktop;
+    }
+
+    &__title {
+      letter-spacing: 0.09em;
+    }
+
+    &__paragraph {
+      width: 57ch;
     }
   }
 }
