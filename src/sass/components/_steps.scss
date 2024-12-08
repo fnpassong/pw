@@ -1,0 +1,84 @@
+@use "../abstracts/" as *;
+
+.steps {
+  // background-color: clr(neutral, 600);
+  &__cards > * {
+    // border: 1px solid clr(neutral, 600);
+    border-radius: size(16);
+  }
+
+  &__cards.grid-layout {
+    display: grid;
+    --gap: #{$gap-mobile};
+    // --col1: 250px;
+    --col1: 1fr;
+    // --col2: none;
+    grid-template-columns: var(--gap) var(--col1) var(--gap);
+    justify-content: center;
+
+    grid-template-areas:
+      ". card1 ."
+      ". card2 ."
+      ". card3 .";
+  }
+
+  &__check {
+    width: clamp(2.25rem, 5vw + 1.5rem, 6.25rem);
+  }
+
+  &__1 {
+    grid-area: card1;
+    // grid-column: 2 / 3;
+  }
+
+  &__2 {
+    grid-area: card2;
+  }
+
+  &__3 {
+    grid-area: card3;
+  }
+
+  :is(&__1, &__2, &__3) {
+    box-shadow: 0.1em 0.2em 0.3em clr(primary, 500);
+  }
+
+  @include mq(medium) {
+    &__cards.grid-layout {
+      display: grid;
+      --gap: #{$gap-tablet};
+      row-gap: size(16);
+      // --col1: 250px;
+      --col1: 1fr;
+      --col2: 1fr;
+      // --col2: none;
+      grid-template-columns: var(--gap) var(--col1) var(--col2) var(--gap);
+      justify-content: center;
+
+      grid-template-areas:
+        ". card1 card2 ."
+        ". card3 card3 .";
+    }
+
+    &__1 {
+      grid-column: 2 / 3;
+    }
+
+    &__2 {
+      grid-column: 3 / 4;
+      margin-inline-start: size(16);
+    }
+  }
+
+  @include mq(large) {
+    &__cards.grid-layout {
+      --gap: #{$gap-desktop};
+      grid-template-columns: var(--gap) 1fr 1fr 1fr var(--gap);
+      grid-template-areas: ". card1 card2 card3 .";
+    }
+
+    &__3 {
+      margin-inline-start: size(16);
+    }
+  }
+}

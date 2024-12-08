@@ -25,3 +25,5 @@ export default defineConfig({
 ```
 
 ## Notas
+
+- 7 / 12

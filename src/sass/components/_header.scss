@@ -42,7 +42,7 @@
     }
 
     &__title {
-      background-color: clr(primary, 550);
+      background-color: clr(primary, 500);
       width: 100%;
       grid-area: title;
       font-size: fs(800);
@@ -90,7 +90,7 @@
   &__note {
     font-size: x-small;
     font-style: italic;
-    color: clr(primary, 550);
+    color: clr(primary, 500);
     font-weight: $fw-700;
   }
 
@@ -130,7 +130,7 @@
 
     &__title {
       width: 30ch;
-      color: clr(primary, 550);
+      color: clr(neutral, 600);
       font-weight: $fw-700;
     }
 
@@ -148,7 +148,8 @@
   }
 
   @include mq(large) {
-    transform: translateY(calc(size(25)) * -1);
+    transform: translateY(calc(size(12)) * -1);
+
     &__wrapper {
       --gap: #{$gap-desktop};
       --col1: 1fr;
@@ -164,6 +165,7 @@
 
     &__title {
       letter-spacing: 0.09em;
+      width: 15ch;
     }
 
     &__paragraph {
