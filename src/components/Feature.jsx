@@ -2,28 +2,28 @@ const Feature = () => {
   return (
     <section className="feature padding-block-36">
       <div className="feature__wrapper">
-        <detail className="card grid-layout flow margin-block-36">
-          <summary className="card__title">
-            <h3>nuestro objetivo</h3>
-          </summary>
+        <div className="card grid-layout margin-block-36">
+          <div className="card__title clr-primary-500 margin-block-36">
+            <h3 className="fs-500">nuestro objetivo</h3>
+            <p className="card__paragraph">
+              Nos especializamos en crear páginas web personalizadas para
+              pequeñas y medianas empresas, ayudándolas a destacar en el mundo
+              digital Listo para llevar tu negocio al siguiente nivel?
+            </p>
+          </div>
           <div className="card__img"></div>
-          <p className="card__paragraph">
-            Nos especializamos en crear páginas web personalizadas para pequeñas
-            y medianas empresas, ayudándolas a destacar en el mundo digital
-            Listo para llevar tu negocio al siguiente nivel?
-          </p>
-        </detail>
-        <detail className="card grid-layout flow" data-card="inverted">
-          <summary className="card__title">
-            <h3>porque pequeñas & medianas empresas</h3>
-          </summary>
+        </div>
+        <div className="card grid-layout flow" data-card="inverted">
+          <div className="card__title clr-primary-500 margin-block-36">
+            <h3 className="fs-500">pequeñas & medianas empresas</h3>
+            <p className="card__paragraph">
+              Nos especializamos en crear páginas web personalizadas para
+              pequeñas y medianas empresas, ayudándolas a destacar en el mundo
+              digital Listo para llevar tu negocio al siguiente nivel?
+            </p>
+          </div>
           <div className="card__img"></div>
-          <p className="card__paragraph">
-            Nos especializamos en crear páginas web personalizadas para pequeñas
-            y medianas empresas, ayudándolas a destacar en el mundo digital
-            Listo para llevar tu negocio al siguiente nivel?
-          </p>
-        </detail>
+        </div>
       </div>
     </section>
   )

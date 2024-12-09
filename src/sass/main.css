@@ -231,7 +231,8 @@ body {
 
 .card.grid-layout {
   --gap: 1.5rem;
-  grid-template-areas: ". title ." "pic pic pic" ". text .";
+  grid-template-columns: var(--gap) 1fr var(--gap);
+  grid-template-areas: "pic pic pic" ". text .";
 }
 .card__img {
   min-width: 375px;
@@ -241,14 +242,19 @@ body {
   aspect-ratio: 1;
   grid-column: 1/-1;
   grid-row: 2/3;
+  grid-area: pic;
 }
 .card__title {
   grid-area: title;
+  grid-column: 2/3;
 }
 .card__paragraph {
-  grid-area: text;
-  font-size: 1.125rem;
+  font-size: 1rem;
+  font-family: "Tinos", serif;
   line-height: 1.2;
+  font-size: 1rem;
+  text-transform: none;
+  grid-column: 2 span 1;
 }
 @media screen and (min-width: 45em) {
   .card.grid-layout {
@@ -262,20 +268,18 @@ body {
     grid-row: 2/3;
   }
   .card__paragraph {
-    grid-area: text;
-    grid-row: 2/3;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.2;
     grid-row: 2/3;
-    background-color: rgba(0, 0, 0, 0.8941176471);
+    background-color: #4f6308;
     color: rgb(255, 255, 255);
     padding: 2.25rem;
   }
   .card__title {
-    height: 60%;
     grid-area: title;
     grid-row: 2/3;
     grid-column: 4/5;
+    align-self: center;
   }
 }
 @media screen and (min-width: 65em) {
@@ -311,9 +315,6 @@ body {
   }
   .card[data-card=inverted] .card__img {
     grid-area: pic;
-  }
-  .card[data-card=inverted] .card__paragraph {
-    grid-area: text;
   }
   .card[data-card=inverted] .card__title {
     grid-area: title;
@@ -406,8 +407,12 @@ body {
   font-size: 1.3125rem;
 }
 
-.fs-400 {
+.fs-450 {
   font-size: 1.125rem;
+}
+
+.fs-400 {
+  font-size: 1rem;
 }
 
 .margin-8 {
