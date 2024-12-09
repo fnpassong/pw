@@ -27,6 +27,12 @@ body {
   color: rgba(0, 0, 0, 0.8941176471);
 }
 
+[class*=__title] {
+  font-family: "Limelight", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .header__logo {
   grid-column: 2/span 1;
   width: 150px;
@@ -95,6 +101,7 @@ body {
   width: min-content;
   font-size: clamp(1.5rem, 3vw + 1.5rem, 2.5rem);
   line-height: 1;
+  text-align: left;
 }
 .hero__note {
   font-size: x-small;
@@ -219,6 +226,97 @@ body {
   }
   .steps__3 {
     margin-inline-start: 1rem;
+  }
+}
+
+.card.grid-layout {
+  --gap: 1.5rem;
+  grid-template-areas: ". title ." "pic pic pic" ". text .";
+}
+.card__img {
+  min-width: 375px;
+  background-image: url(../assets/img/hombre-oficina-preocupado-tablet.jpg);
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 1;
+  grid-column: 1/-1;
+  grid-row: 2/3;
+}
+.card__title {
+  grid-area: title;
+}
+.card__paragraph {
+  grid-area: text;
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+@media screen and (min-width: 45em) {
+  .card.grid-layout {
+    --gap: 3.375rem;
+    grid-template-columns: var(--gap) auto auto 1fr var(--gap);
+    grid-template-areas: ". pic title text .";
+  }
+  .card__img {
+    max-width: 473px;
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  .card__paragraph {
+    grid-area: text;
+    grid-row: 2/3;
+    font-size: 1.125rem;
+    line-height: 1.2;
+    grid-row: 2/3;
+    background-color: rgba(0, 0, 0, 0.8941176471);
+    color: rgb(255, 255, 255);
+    padding: 2.25rem;
+  }
+  .card__title {
+    height: 60%;
+    grid-area: title;
+    grid-row: 2/3;
+    grid-column: 4/5;
+  }
+}
+@media screen and (min-width: 65em) {
+  .card.grid-layout {
+    --gap: 8.4375rem;
+    grid-template-columns: var(--gap) auto auto 1fr var(--gap);
+    grid-template-areas: "pic pic title text text";
+  }
+  .card__img {
+    min-width: 473px;
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+}
+.card[data-card=inverted] .card__img {
+  background-image: url(../assets/img/grupo-en-oficina.jpg);
+}
+@media screen and (min-width: 45em) {
+  .card[data-card=inverted].grid-layout {
+    --gap: 3.375rem;
+    grid-template-columns: var(--gap) auto auto 1fr var(--gap);
+    grid-template-areas: ". text title pic .";
+  }
+  .card[data-card=inverted].grid-layout .card__title {
+    grid-column: 2/3;
+  }
+}
+@media screen and (min-width: 65em) {
+  .card[data-card=inverted].grid-layout {
+    --gap: 8.4375rem;
+    grid-template-columns: var(--gap) auto auto auto var(--gap);
+    grid-template-areas: "text text title pic pic";
+  }
+  .card[data-card=inverted] .card__img {
+    grid-area: pic;
+  }
+  .card[data-card=inverted] .card__paragraph {
+    grid-area: text;
+  }
+  .card[data-card=inverted] .card__title {
+    grid-area: title;
   }
 }
 

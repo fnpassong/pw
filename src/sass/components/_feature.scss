@@ -1,0 +1,133 @@
+@use "../abstracts/" as *;
+
+.card {
+  &.grid-layout {
+    --gap: #{$gap-mobile};
+    // grid-template-columns: var(--gap) 1fr var(--gap);
+    // grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      ". title ."
+      "pic pic pic"
+      ". text .";
+  }
+  &__img {
+    min-width: 375px;
+    background-image: url(../assets/img/hombre-oficina-preocupado-tablet.jpg);
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 1;
+
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  &__title {
+    grid-area: title;
+
+    // grid-column: 2 / 3;
+  }
+
+  &__paragraph {
+    grid-area: text;
+    font-size: fs(400);
+    line-height: 1.2;
+  }
+
+  @include mq(medium) {
+    &.grid-layout {
+      //   background-color: red;
+      --gap: #{$gap-tablet};
+      grid-template-columns: var(--gap) auto auto 1fr var(--gap);
+      grid-template-areas: ". pic title text .";
+    }
+
+    &__img {
+      max-width: 473px;
+      //   background-image: url(../assets/img/hombre-oficina-preocupado-tablet.jpg);
+      //   background-position: center;
+      //   background-size: cover;
+      //   aspect-ratio: 1;
+
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
+
+    &__paragraph {
+      grid-area: text;
+      grid-row: 2 / 3;
+      font-size: fs(400);
+      line-height: 1.2;
+      grid-row: 2 / 3;
+
+      background-color: clr(neutral, 600);
+      color: clr(neutral, 400);
+      padding: size(36);
+    }
+
+    &__title {
+      height: 60%;
+      grid-area: title;
+      //   align-self: start;
+      grid-row: 2 / 3;
+      grid-column: 4 / 5;
+    }
+  }
+
+  @include mq(large) {
+    &.grid-layout {
+      //   background-color: red;
+      --gap: #{$gap-desktop};
+      grid-template-columns: var(--gap) auto auto 1fr var(--gap);
+      grid-template-areas: "pic pic title text text";
+    }
+
+    &__img {
+      min-width: 473px;
+      //   background-image: url(../assets/img/hombre-oficina-preocupado-tablet.jpg);
+      //   background-position: center;
+      //   background-size: cover;
+      //   aspect-ratio: 1;
+
+      grid-column: 1 / 4;
+      grid-row: 2 / 3;
+    }
+  }
+
+  &[data-card="inverted"] {
+    .card__img {
+      background-image: url(../assets/img/grupo-en-oficina.jpg);
+    }
+
+    @include mq(medium) {
+      &.grid-layout {
+        //   background-color: red;
+        --gap: #{$gap-tablet};
+        grid-template-columns: var(--gap) auto auto 1fr var(--gap);
+        grid-template-areas: ". text title pic .";
+
+        .card__title {
+          grid-column: 2/ 3;
+        }
+      }
+    }
+
+    @include mq(large) {
+      &.grid-layout {
+        --gap: #{$gap-desktop};
+        grid-template-columns: var(--gap) auto auto auto var(--gap);
+        grid-template-areas: "text text title pic pic";
+      }
+      .card__img {
+        grid-area: pic;
+      }
+      .card__paragraph {
+        // grid-column: 1/ 4;
+        grid-area: text;
+      }
+
+      .card__title {
+        grid-area: title;
+      }
+    }
+  }
+}
