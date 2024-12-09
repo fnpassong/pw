@@ -2,6 +2,7 @@ import React from "react"
 import Header from "../components/Header"
 import Steps from "../components/Steps"
 import Feature from "../components/Feature"
+import Hosting from "../components/Hosting"
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Header />
       <Steps />
       <Feature />
+      <Hosting />
     </div>
   )
 }
