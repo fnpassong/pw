@@ -1,0 +1,159 @@
+@use "../abstracts/" as *;
+
+.third {
+  &__icon {
+    width: 45px;
+  }
+
+  &__subtitle {
+    color: clr(neutral, 600);
+    font-family: $ff-accent;
+    text-transform: uppercase;
+    font-size: clamp(fs(400), 0.5vw + fs(400), fs(500));
+  }
+
+  &__content {
+    --gap: #{$gap-mobile};
+    grid-template-areas:
+      ". .  title ."
+      ". icon text .";
+  }
+
+  &__ul {
+    list-style: none;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: calc(size(8) / 4);
+      height: 100%;
+      background-color: clr(primary, 500);
+      left: -10px;
+      top: 0;
+    }
+  }
+
+  &__box {
+    grid-area: icon;
+    grid-column: 2 / 3;
+    grid-row: 2 / span 1;
+  }
+
+  &__ul {
+    grid-area: text;
+
+    margin-inline-start: size(16);
+  }
+
+  &__li {
+    text-align: left;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-areas:
+      ". card1 ."
+      ". card2 ."
+      ". card3 .";
+  }
+
+  &__card-1 {
+    grid-area: card1;
+  }
+  &__card-2 {
+    grid-area: card2;
+  }
+  &__card-3 {
+    grid-area: card3;
+  }
+
+  :is(&__card-1, &__card-2, &__card-3) {
+    padding: size(16);
+    border-radius: size(16);
+    background-color: clr(neutral, 450);
+    // margin-block-start: 16px;
+  }
+
+  @include mq(medium) {
+    &__wrapper {
+      --gap: #{$gap-tablet};
+      grid-template-columns: var(--gap) 1fr 1fr var(--gap);
+      // grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        ". card1 card2 ."
+        ". card3 card3 .";
+    }
+
+    &__card-1 {
+      margin-inline-end: 1rem;
+    }
+
+    &__card-3 {
+      .third__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .third__ul::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: calc(size(8) / 4);
+        background-color: clr(primary, 500);
+        left: -10px;
+        top: 0;
+      }
+
+      .third__subtitle {
+        margin-block-start: size(16);
+      }
+
+      .third__label {
+        font-size: 1.5rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  @include mq(large) {
+    &__wrapper {
+      --gap: #{$gap-desktop};
+      grid-template-columns: var(--gap) 1fr 1fr 1fr var(--gap);
+      // grid-template-rows: 1fr 1fr;
+      grid-template-areas: ". card1 card2 card3 .";
+    }
+
+    &__card-2 {
+      margin-inline-end: 1rem;
+    }
+
+    :is(&__card-1, &__card-2, &__card-3) {
+      .third__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .third__ul::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: calc(size(8) / 4);
+        background-color: clr(primary, 500);
+        left: -10px;
+        top: 0;
+      }
+
+      .third__subtitle {
+        margin-block-start: size(16);
+      }
+
+      .third__label {
+        font-size: 1rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

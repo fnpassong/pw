@@ -39,9 +39,9 @@
     grid-area: card3;
   }
 
-  :is(&__1, &__2, &__3) {
-    box-shadow: 0.1em 0.2em 0.3em clr(primary, 500);
-  }
+  // :is(&__1, &__2, &__3) {
+  //   box-shadow: 0.1em 0.2em 0.3em clr(primary, 500);
+  // }
 
   @include mq(medium) {
     &__cards.grid-layout {

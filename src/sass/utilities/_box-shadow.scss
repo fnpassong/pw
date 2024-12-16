@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.box-shadow {
+  //   --shadowX: 0.1em;
+  //   --shadowY: 0.2em;
+  box-shadow: var(--shadowX, 0.1em) var(--shadowY, 0.2em) var(--blur, 0.3em)
+    clr(primary, 500);
+}
+
+.box-shadow[data-level="shadow-1"] {
+  --shadowX: 0.1em;
+  --shadowY: 0.1em;
+  --blur: 0.2em;
+}

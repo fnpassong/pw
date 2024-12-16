@@ -4,7 +4,7 @@ const Steps = () => {
   return (
     <section className="steps padding-block-36">
       <div className="steps__wrapper">
-        <h2 className="steps__title text-center uppercase ff-accent fs-500 clr-neutral-600">
+        <h2 className="steps__title text-center uppercase ff-accent fs-500">
           sólo tres pasos
         </h2>
         <div className="steps__cards grid-layout flow margin-block-start-32">
@@ -12,10 +12,10 @@ const Steps = () => {
             return (
               <article
                 key={element.id}
-                className={`text-center steps__${element.id} padding-20 bg-neutral-450`}
+                className={`text-center steps__${element.id} padding-20 bg-neutral-450 box-shadow`}
               >
                 <img className="steps__check" src={element.icon} alt="check" />
-                <h4 className="ff-accent uppercase fw-bold clr-neutral-600">
+                <h4 className="ff-accent uppercase fw-bold clr-primary-500">
                   {element.title}
                 </h4>
                 <p className="clr-neutral-600">{element.text}</p>
