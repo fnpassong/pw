@@ -68,8 +68,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     min-width: $width-mobile;
+
     aspect-ratio: 16 / 9;
     grid-area: stack;
+
+    overflow: hidden;
   }
 
   &__text-group {
@@ -79,6 +82,7 @@
     grid-column: 2 / span 1;
 
     color: white;
+    padding-block: 1rem;
   }
 
   &__title {
@@ -121,7 +125,7 @@
     &__pic {
       background-image: url(../assets/img/hero-tablet.webp);
       background-size: cover;
-      // max-width: 690px;
+      min-width: 375px;
       height: auto;
       aspect-ratio: 16 / 9;
 
@@ -130,7 +134,7 @@
     }
 
     &__title {
-      width: 30ch;
+      width: 20ch;
       color: clr(neutral, 600);
       font-weight: $fw-700;
     }

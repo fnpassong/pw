@@ -31,6 +31,7 @@ body {
   font-family: "Limelight", sans-serif;
   text-transform: uppercase;
   text-align: center;
+  color: #4f6308;
 }
 
 .header__logo {
@@ -91,10 +92,12 @@ body {
   min-width: 30em;
   aspect-ratio: 16/9;
   grid-area: stack;
+  overflow: hidden;
 }
 .hero__text-group {
   grid-column: 2/span 1;
   color: white;
+  padding-block: 1rem;
 }
 .hero__title {
   width: -moz-min-content;
@@ -129,13 +132,14 @@ body {
   .hero__pic {
     background-image: url(../assets/img/hero-tablet.webp);
     background-size: cover;
+    min-width: 375px;
     height: auto;
     aspect-ratio: 16/9;
     grid-area: pic;
     grid-column: 3/4;
   }
   .hero__title {
-    width: 30ch;
+    width: 20ch;
     color: rgba(0, 0, 0, 0.8941176471);
     font-weight: 700;
   }
@@ -195,9 +199,6 @@ body {
 }
 .steps__3 {
   grid-area: card3;
-}
-:is(.steps__1, .steps__2, .steps__3) {
-  box-shadow: 0.1em 0.2em 0.3em #4f6308;
 }
 @media screen and (min-width: 45em) {
   .steps__cards.grid-layout {
@@ -318,6 +319,125 @@ body {
   }
   .card[data-card=inverted] .card__title {
     grid-area: title;
+  }
+}
+
+.third__icon {
+  width: 45px;
+}
+.third__subtitle {
+  color: rgba(0, 0, 0, 0.8941176471);
+  font-family: "Limelight", sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 0.5vw + 1rem, 1.3125rem);
+}
+.third__content {
+  --gap: 1.5rem;
+  grid-template-areas: ". .  title ." ". icon text .";
+}
+.third__ul {
+  list-style: none;
+  position: relative;
+}
+.third__ul::after {
+  content: "";
+  position: absolute;
+  width: 0.125rem;
+  height: 100%;
+  background-color: #4f6308;
+  left: -10px;
+  top: 0;
+}
+.third__box {
+  grid-area: icon;
+  grid-column: 2/3;
+  grid-row: 2/span 1;
+}
+.third__ul {
+  grid-area: text;
+  margin-inline-start: 1rem;
+}
+.third__li {
+  text-align: left;
+}
+.third__wrapper {
+  display: grid;
+  grid-template-areas: ". card1 ." ". card2 ." ". card3 .";
+}
+.third__card-1 {
+  grid-area: card1;
+}
+.third__card-2 {
+  grid-area: card2;
+}
+.third__card-3 {
+  grid-area: card3;
+}
+:is(.third__card-1, .third__card-2, .third__card-3) {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgba(244, 225, 225, 0.4705882353);
+}
+@media screen and (min-width: 45em) {
+  .third__wrapper {
+    --gap: 3.375rem;
+    grid-template-columns: var(--gap) 1fr 1fr var(--gap);
+    grid-template-areas: ". card1 card2 ." ". card3 card3 .";
+  }
+  .third__card-1 {
+    margin-inline-end: 1rem;
+  }
+  .third__card-3 .third__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .third__card-3 .third__ul::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.125rem;
+    background-color: #4f6308;
+    left: -10px;
+    top: 0;
+  }
+  .third__card-3 .third__subtitle {
+    margin-block-start: 1rem;
+  }
+  .third__card-3 .third__label {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
+}
+@media screen and (min-width: 65em) {
+  .third__wrapper {
+    --gap: 8.4375rem;
+    grid-template-columns: var(--gap) 1fr 1fr 1fr var(--gap);
+    grid-template-areas: ". card1 card2 card3 .";
+  }
+  .third__card-2 {
+    margin-inline-end: 1rem;
+  }
+  :is(.third__card-1, .third__card-2, .third__card-3) .third__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  :is(.third__card-1, .third__card-2, .third__card-3) .third__ul::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.125rem;
+    background-color: #4f6308;
+    left: -10px;
+    top: 0;
+  }
+  :is(.third__card-1, .third__card-2, .third__card-3) .third__subtitle {
+    margin-block-start: 1rem;
+  }
+  :is(.third__card-1, .third__card-2, .third__card-3) .third__label {
+    font-size: 1rem;
+    text-transform: capitalize;
   }
 }
 
@@ -759,4 +879,14 @@ body {
   .flow > *:not(:first-child) {
     margin-top: 0px;
   }
+}
+
+.box-shadow {
+  box-shadow: var(--shadowX, 0.1em) var(--shadowY, 0.2em) var(--blur, 0.3em) #4f6308;
+}
+
+.box-shadow[data-level=shadow-1] {
+  --shadowX: 0.1em;
+  --shadowY: 0.1em;
+  --blur: 0.2em;
 }/*# sourceMappingURL=main.css.map */

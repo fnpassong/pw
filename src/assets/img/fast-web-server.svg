@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="litespeedwebserver">
+  <path fill="#4e4e4c" d="M6.935 12.18h26.767v27.083H6.935z" class="color4e4c4d svgShape"></path>
+  <path fill="#676765" d="M33.837 35.638H6.8a4.83 4.83 0 0 0-4.83 4.83v3.701A4.83 4.83 0 0 0 6.798 49h27.038a4.83 4.83 0 0 0 4.83-4.83v-3.701a4.83 4.83 0 0 0-4.83-4.831zm0-17.323H6.8a4.83 4.83 0 0 0-4.83 4.83v3.701a4.83 4.83 0 0 0 4.83 4.83h27.038a4.83 4.83 0 0 0 4.83-4.83v-3.7a4.83 4.83 0 0 0-4.83-4.831zm0-17.315H6.8a4.83 4.83 0 0 0-4.83 4.83v3.701a4.83 4.83 0 0 0 4.83 4.831h27.038a4.83 4.83 0 0 0 4.83-4.83V5.83A4.83 4.83 0 0 0 33.838 1z" class="color656766 svgShape"></path>
+  <circle cx="9.085" cy="7.681" r="2.571" fill="#cdec62" class="colorec6e62 svgShape"></circle>
+  <circle cx="16.393" cy="7.681" r="2.571" fill="#a6bd57" class="color85bd57 svgShape"></circle>
+  <circle cx="9.085" cy="24.996" r="2.571" fill="#cdec62" class="colorec6e62 svgShape"></circle>
+  <circle cx="16.393" cy="24.996" r="2.571" fill="#a6bd57" class="color85bd57 svgShape"></circle>
+  <circle cx="9.085" cy="42.319" r="2.571" fill="#cdec62" class="colorec6e62 svgShape"></circle>
+  <circle cx="16.393" cy="42.319" r="2.571" fill="#a6bd57" class="color85bd57 svgShape"></circle>
+  <circle cx="36.87" cy="33.49" r="11.161" fill="#e7e9e0" class="colore7e3e6 svgShape"></circle>
+  <path fill="#a6bd57" d="M27.528 33.49h2.842c.079-3.528 2.954-6.367 6.5-6.367v-2.842c-5.117 0-9.263 4.11-9.342 9.21z" class="color85bd57 svgShape"></path>
+  <path fill="#cdec62" d="M36.87 24.281v2.842c3.547 0 6.422 2.84 6.5 6.367h2.842c-.078-5.098-4.224-9.209-9.342-9.209z" class="colorec6e62 svgShape"></path>
+  <path fill="#676765" d="M38.097 33.792a.825.825 0 1 1-1.304.999s-2.938-4.58-2.645-4.804 3.95 3.805 3.95 3.805z" class="color656766 svgShape"></path>
+  <circle cx="36.87" cy="33.49" r="1.344" fill="#4e4e4c" class="color4e4c4d svgShape"></circle>
+  <circle cx="36.87" cy="33.49" r=".667" fill="#676765" class="color656766 svgShape"></circle>
+  <path fill="#a5ba5c" d="M32.316 40.112a.796.796 0 0 1-.797-.797v-.91a.796.796 0 0 1 1.593 0v.91c0 .44-.357.797-.796.797zm3.036 0a.796.796 0 0 1-.796-.797v-.91a.796.796 0 0 1 1.593 0v.91c0 .44-.357.797-.797.797zm3.036 0a.796.796 0 0 1-.796-.797v-.91a.796.796 0 0 1 1.593 0v.91c0 .44-.357.797-.797.797zm3.037 0a.796.796 0 0 1-.797-.797v-.91a.796.796 0 0 1 1.593 0v.91c0 .44-.356.797-.796.797z" class="colorba8c5c svgShape"></path>
+</svg>
