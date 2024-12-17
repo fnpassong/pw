@@ -441,6 +441,104 @@ body {
   }
 }
 
+.form__container {
+  position: relative;
+}
+.form__container::after {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  content: "";
+  background-image: url(../assets/img/form.svg);
+  background-color: #808080;
+  background-size: cover;
+  height: clamp(30px, 3vw + 0.5rem, 80px);
+  aspect-ratio: 1;
+}
+.form__lario {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  box-shadow: inset 0 5px 40px 0 #808080;
+}
+.form__wrapper {
+  display: grid;
+  grid-template-areas: "formu";
+  place-items: center;
+}
+.form__wrapper > * {
+  grid-area: formu;
+}
+.form__error {
+  display: block;
+  color: rgba(233, 23, 23, 0.783);
+  font-size: x-small;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.form__button {
+  border: none;
+  grid-column: 1/2;
+  min-height: 50px;
+  background-color: #b6ea00;
+}
+@media screen and (min-width: 45em) {
+  .form__wrapper {
+    display: grid;
+    grid-template-columns: 3.375rem 1fr 1fr 3.375rem;
+  }
+  .form__container {
+    grid-column: 3/span 2;
+    background-color: #e7e9e0;
+    align-self: center;
+  }
+  .form__img {
+    grid-column: 1/3;
+  }
+  .form__lario {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: none;
+  }
+}
+@media screen and (min-width: 65em) {
+  .form__wrapper {
+    display: grid;
+    grid-template-columns: 8.4375rem 1fr 1fr 8.4375rem;
+    grid-template-areas: ". pic formulario .";
+    justify-items: stretch;
+  }
+  .form__img {
+    grid-column: 2/3;
+    grid-area: pic;
+  }
+  .form__container {
+    background-color: #e7e9e0;
+    grid-area: formulario;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+input {
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
+  width: 100%;
+}
+
+.textArea {
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
+  min-height: 100px;
+  border: none;
+  width: 100%;
+}
+
 .grid-layout {
   display: grid;
   grid-template-columns: var(--gap, 1.5rem) var(--col1, auto) var(--col2, 1fr) var(--gap, 1.5rem);
