@@ -109,7 +109,7 @@ const Form = () => {
             <div>
               <textarea
                 className="textArea"
-                placeholder="preguntas/comentarios"
+                placeholder="Preguntas/Comentarios"
                 {...register("mensaje")}
               />
             </div>

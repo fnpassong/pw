@@ -530,6 +530,11 @@ input {
   font-size: 0.7rem;
   width: 100%;
 }
+@media screen and (min-width: 45em) {
+  input {
+    font-size: clamp(1rem, 1rem + 2vw, 1.3125rem);
+  }
+}
 
 .textArea {
   padding: 0.5rem 1rem;
@@ -537,6 +542,11 @@ input {
   min-height: 100px;
   border: none;
   width: 100%;
+}
+@media screen and (min-width: 45em) {
+  .textArea {
+    font-size: clamp(1rem, 1rem + 2vw, 1.3125rem);
+  }
 }
 
 .grid-layout {
