@@ -2,7 +2,7 @@
 
 .third {
   &__icon {
-    width: 45px;
+    width: 2.8125rem;
   }
 
   &__subtitle {
@@ -52,6 +52,8 @@
 
   &__wrapper {
     display: grid;
+    --gap: #{$gap-mobile};
+    grid-template-columns: var(--gap) 1fr var(--gap);
     grid-template-areas:
       ". card1 ."
       ". card2 ."

@@ -323,7 +323,7 @@ body {
 }
 
 .third__icon {
-  width: 45px;
+  width: 2.8125rem;
 }
 .third__subtitle {
   color: rgba(0, 0, 0, 0.8941176471);
@@ -362,6 +362,8 @@ body {
 }
 .third__wrapper {
   display: grid;
+  --gap: 1.5rem;
+  grid-template-columns: var(--gap) 1fr var(--gap);
   grid-template-areas: ". card1 ." ". card2 ." ". card3 .";
 }
 .third__card-1 {
