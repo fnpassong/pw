@@ -44,6 +44,7 @@
     grid-area: text;
 
     margin-inline-start: size(16);
+    text-transform: capitalize;
   }
 
   &__li {
@@ -154,7 +155,6 @@
 
       .third__label {
         font-size: 1rem;
-        text-transform: capitalize;
       }
     }
   }
