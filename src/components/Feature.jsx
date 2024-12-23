@@ -6,9 +6,9 @@ const Feature = () => {
           <div className="card__title clr-primary-500 margin-block-36">
             <h3 className="fs-500">nuestro objetivo</h3>
             <p className="card__paragraph">
-              Nos especializamos en crear páginas web personalizadas para
-              pequeñas y medianas empresas, ayudándolas a destacar en el mundo
-              digital Listo para llevar tu negocio al siguiente nivel?
+              Empoderar a las medianas y pequeñas empresas para que prosperen en
+              el entorno digital, ofreciendo soluciones que sean tanto
+              atractivas como funcionales. 🚀✨
             </p>
           </div>
           <div className="card__img"></div>
@@ -17,9 +17,9 @@ const Feature = () => {
           <div className="card__title clr-primary-500 margin-block-36">
             <h3 className="fs-500">pequeñas & medianas empresas</h3>
             <p className="card__paragraph">
-              Nos especializamos en crear páginas web personalizadas para
-              pequeñas y medianas empresas, ayudándolas a destacar en el mundo
-              digital Listo para llevar tu negocio al siguiente nivel?
+              Un sitio web profesional construye confianza y credibilidad,
+              haciendo que los clientes se sientan más cómodos al elegir tus
+              productos o servicios.
             </p>
           </div>
           <div className="card__img"></div>

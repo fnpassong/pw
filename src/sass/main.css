@@ -253,7 +253,6 @@ body {
   font-size: 1rem;
   font-family: "Tinos", serif;
   line-height: 1.2;
-  font-size: 1rem;
   text-transform: none;
   grid-column: 2 span 1;
 }
@@ -269,7 +268,7 @@ body {
     grid-row: 2/3;
   }
   .card__paragraph {
-    font-size: 1rem;
+    font-size: 1.3125rem;
     line-height: 1.2;
     grid-row: 2/3;
     background-color: #4f6308;

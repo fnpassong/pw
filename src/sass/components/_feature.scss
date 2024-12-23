@@ -34,7 +34,7 @@
     font-size: fs(400);
     font-family: $ff-base;
     line-height: 1.2;
-    font-size: 1rem;
+    // font-size: 1rem;
     text-transform: none;
     grid-column: 2 span 1;
   }
@@ -61,7 +61,7 @@
     &__paragraph {
       // grid-area: text;
       // grid-row: 2 / 3;
-      font-size: fs(400);
+      font-size: fs(500);
       line-height: 1.2;
       grid-row: 2 / 3;
 
