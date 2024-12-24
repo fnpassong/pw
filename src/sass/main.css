@@ -90,7 +90,8 @@ body {
   background-image: linear-gradient(rgba(5, 7, 12, 0.7), rgba(5, 7, 12, 0.3)), url(../assets/img/img-hero-mobile.webp);
   background-repeat: no-repeat;
   background-size: cover;
-  min-width: 30em;
+  max-width: 30em;
+  height: 100%;
   aspect-ratio: 16/9;
   grid-area: stack;
   overflow: hidden;

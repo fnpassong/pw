@@ -68,8 +68,8 @@
       url(../assets/img/img-hero-mobile.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: $width-mobile;
-
+    max-width: $width-mobile;
+    height: 100%;
     aspect-ratio: 16 / 9;
     grid-area: stack;
 
