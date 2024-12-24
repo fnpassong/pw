@@ -552,6 +552,21 @@ input {
   }
 }
 
+.footer {
+  padding: 2rem;
+  min-height: 200px;
+  background-color: #4f6308;
+  color: rgb(255, 255, 255);
+  display: grid;
+  place-items: center;
+}
+.footer__subtitle {
+  font-size: clamp(1.5rem, 3vw + 1.5rem, 2.5rem);
+}
+.footer code {
+  color: #b6ea00;
+}
+
 .grid-layout {
   display: grid;
   grid-template-columns: var(--gap, 1.5rem) var(--col1, auto) var(--col2, 1fr) var(--gap, 1.5rem);
